@@ -15,10 +15,10 @@ jobs:
 #        with:
 #          python-version: '3.13'
 #
-#      - name: Install dependencies
-#        run: |
-#          pip install -r requirements.txt
-#          # Установка Selenium, pytest, allure-pytest
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          # Установка Selenium, pytest, allure-pytest
 #
 #      - name: Set up JDK
 #        uses: actions/setup-java@v3
@@ -68,7 +68,7 @@ jobs:
         run: |
           pytest --alluredir=allure-results
         continue-on-error: true # Чтобы сгенерировать отчет даже при падении тестов
-        
+
       - name: Get Allure history
         uses: actions/checkout@v3
         if: always()
