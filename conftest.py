@@ -4,6 +4,8 @@ from page.login_page import LoginPage
 from test_data.data_provider import DataProvider
 from configuration.config_provider import ConfigProvider
 
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument("--headless")  # Запуск без графического интерфейса
