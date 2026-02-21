@@ -80,7 +80,7 @@ jobs:
 
       # Шаг 2: Установка Java (для allure-cli)
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -91,7 +91,7 @@ jobs:
 
       # Шаг 4: Загрузка отчета (артефакт)
       - name: Upload Allure Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
