@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.13'
 
@@ -22,10 +22,10 @@ jobs:
 
 
       - name: Install Chrome
-        uses: browser-actions/setup-chrome@v4
+        uses: browser-actions/setup-chrome@v1
 
       - name: Install Chromedriver
-        uses: nanasess/setup-chromedriver@v5
+        uses: nanasess/setup-chromedriver@v2
 
       - name: Run Tests
         run: |
