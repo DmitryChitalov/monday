@@ -68,7 +68,7 @@ jobs:
       run: pytest --alluredir=allure-results # Пример для Python
 
     - name: Get Allure history
-      uses: actions/ch69eckout@v3
+      uses: actions/checkout@v3
       if: always()
       continue-on-error: true
       with:
