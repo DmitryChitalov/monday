@@ -13,12 +13,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.13'
 
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
           # Установка Selenium, pytest, allure-pytest
+          
 
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v1
@@ -30,6 +31,16 @@ jobs:
         run: |
           pytest --alluredir=allure-results
         continue-on-error: true # Чтобы сгенерировать отчет даже при падении тестов
+
+      - name: Run Selenium Tests
+        run: mvn clean test # Или pytest
+      - name: Generate Allure Report
+        run: allure generate allure-results -o allure-results
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: allure-results
 
       - name: Get Allure history
         uses: actions/checkout@v3
