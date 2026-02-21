@@ -92,7 +92,7 @@ jobs:
         with:
           allure_results: 'allure-results'
           allure_report: 'allure-report'
-          gh_pages: 'gh-pages' # Опционально: для публикации в GH Pages
+          gh_pages: 'gh-pages' # Опционально: для публикации в GH Pages!
 
       - name: Upload Allure Report
         if: always()
