@@ -22,7 +22,7 @@ jobs:
 
 
       - name: Install Chrome
-        uses: browser-actions/setup-chrome@v5
+        uses: browser-actions/setup-chrome@v4
 
       - name: Install Chromedriver
         uses: nanasess/setup-chromedriver@v5
