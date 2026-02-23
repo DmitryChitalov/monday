@@ -27,7 +27,7 @@ jobs:
 
   publish-report:
     if: always()
-    needs: [ run-tests ]
+    needs: [ test ]
     runs-on: ubuntu-latest
 
     steps:
